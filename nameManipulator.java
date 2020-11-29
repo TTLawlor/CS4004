@@ -5,7 +5,7 @@ public class nameManipulator {
 
     public nameManipulator() {
         names = new ArrayList<String>(Arrays.asList(
-                "Aang", "Sokka", "Appa", "Katara", "Zuko", "Toph", "Iroh"));
+                "Aang", "sokkA", "aPPa", "katara", "Zuko", "Toph", "Iroh"));
     }
 
     //Rachel
@@ -20,14 +20,16 @@ public class nameManipulator {
     }
 
     //Mary
-    public void capitalise() {
+    public String capitalise(int position ) {
         String capitalisedName;
         for (int i = 0; i < names.size(); i++) {
-            capitalisedName = names.get(i);
-            capitalisedName = Character.toUpperCase(capitalisedName.charAt(0)) + capitalisedName.substring(1).toLowerCase();
-            names.set(i, capitalisedName);
+             capitalisedName = names.get(position);
+            capitalisedName = Character.toUpperCase(capitalisedName.charAt(0)) + capitalisedName.substring(1).toLowerCase();           
+            names.set(position, capitalisedName);
         }
+        return names.get(position);
     }
+
 
     //Luke
     public ArrayList<String> removeWordsStartingWith(String portion) {

@@ -1,0 +1,30 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class nameManipulatorTest {
+
+  private nameManipulator nameManip;
+
+	@BeforeEach
+    void setUp() {
+	  nameManip = new nameManipulator();
+    }
+ 
+	@Test
+	void testCapital1() {
+		   String result = nameManip.capitalise(2);
+	        assertEquals("Appa", result);   
+	}
+	@Test
+	void testCapital2() {
+		   String result = nameManip.capitalise(1);
+	        assertEquals("Sokka", result);   
+	}
+	@Test
+	void testCapital3() {
+		   String result = nameManip.capitalise(3);
+	        assertEquals("Katara", result);   
+	}
+
+}
